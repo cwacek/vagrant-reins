@@ -1,28 +1,24 @@
 # Vagrant::Reins
 
-TODO: Write a gem description
+A wrapper around the vagrant command line tools, making use of
+the machine readable output added in 1.4.x to control Vagrant.
 
-## Installation
+This is version 0.0.1, barely working, but you can currently
+start Vagrant VMs using reins
 
-Add this line to your application's Gemfile:
-
-    gem 'vagrant-reins'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-reins
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'vagrant/reins/harness'
+
+    harness = Vagrant::Reins::Harness.new 'path_to/vagrant_project_dir'
+    harness.status
+
+    harness.up
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/vagrant-reins/fork )
+1. Fork it ( http://github.com/cwacek/vagrant-reins/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
